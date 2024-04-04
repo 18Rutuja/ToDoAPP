@@ -1,55 +1,42 @@
-
-/* Home.css */
-
-body {
-    background-color: #1f1e1e; /* Set the initial background color */
-    transition: background-color 0.5s ease; /* Add transition for smooth effect */
-  }
-  
-  body:hover {
-    background-color: #5cdb95; /* Change the background color on hover */
-  }
-  
 /* 
-body {
-    background: linear-gradient(-45deg, rgb(0, 230, 122), rgba(27, 27, 27, 0.5), rgb(78, 78, 78));
-    background-size: 400% 400%;
-    animation: gradientAnimation 15s ease infinite alternate;
-  }
-  
-  /* @keyframes gradientAnimation {
-    0% {
-      background-position: 0% 50%;
-    }
-    100% {
-      background-position: 100% 50%;
-    }
-  } */
-   
+Main Styles for Home Page
+*/
 
+/* Set initial background color and add transition for smooth effect */
+body {
+    background-color: #1f1e1e;
+    transition: background-color 0.5s ease;
+}
+
+/* Change background color on hover */
+body:hover {
+    background-color: #5cdb95;
+}
+
+/* Fade in effect for h1 */
 h1 {
-    text-align: center; 
-    font-size: 36px; 
-    margin-bottom: 20px; 
-    color:white; 
-    text-transform: uppercase; 
-    letter-spacing: 2px; 
-    opacity: 0; 
-    animation: fadeIn 1s ease forwards; 
-  }
-  
-  
-  @keyframes fadeIn {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    opacity: 0;
+    animation: fadeIn 1s ease forwards;
+}
+
+/* Keyframes for fadeIn animation */
+@keyframes fadeIn {
     from {
-      opacity: 0; 
+        opacity: 0;
     }
     to {
-      opacity: 2; 
+        opacity: 2;
     }
-  }
-  
-  
-  .todo-wrapper {
+}
+
+/* Styles for the todo wrapper */
+.todo-wrapper {
     background: #353434;
     padding: 2%;
     width: 90%;
@@ -58,47 +45,49 @@ h1 {
     box-shadow: 0px 5px 7px rgba(27, 27, 27, 0.5);
     border-radius: 10px;
     overflow: hidden;
-  }
-  
-  .todo-input {
+}
+
+/* Styles for todo input section */
+.todo-input {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     border-bottom: 1px solid rgb(78, 78, 78);
     padding-bottom: 25px;
     margin-bottom: 25px;
-  }
-  
-  .todo-input-item {
+}
+
+.todo-input-item {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     margin-right: 25px;
     margin-left: 15px;
-  }
-  
-  .todo-input-item label {
+}
+
+.todo-input-item label {
     font-weight: bold;
     margin-bottom: 10px;
-    color:  rgb(0, 230, 122);;
-  }
-  
-  .todo-input-item input {
+    color: rgb(0, 230, 122);
+}
+
+.todo-input-item input {
     padding: 8px;
     border: none;
     width: 100%;
     max-width: 250px;
     border-radius: 5px;
     transition: all 0.3s ease;
-    margin-bottom: 10px; /* Added space between input fields */
-  }
-  
-  .todo-input-item input:focus {
+    margin-bottom: 10px;
+}
+
+.todo-input-item input:focus {
     outline: 1px solid rgb(0, 230, 122);
-    box-shadow:0px 3px 5px rgb(0, 230, 122) ;
-  }
-  
-  .primaryBtn{
+    box-shadow: 0px 3px 5px rgb(0, 230, 122);
+}
+
+/* Primary button styles */
+.primaryBtn {
     background-color: rgb(0, 230, 122);
     color: white;
     border: none;
@@ -107,18 +96,19 @@ h1 {
     padding: 10px 20px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-  }
-  
-  .primaryBtn:hover{
-    background-color: rgb(4, 196, 106); 
-  }
-   
-  .primaryBtn:focus{
-    box-shadow:0px 3px 5px rgb(0, 230, 122) ;
-  }
-  
-  .secondaryBtn {
-    background-color: rgb(0, 230, 122);
+}
+
+.primaryBtn:hover {
+    background-color: rgb(4, 196, 106);
+}
+
+.primaryBtn:focus {
+    box-shadow: 0px 3px 5px rgb(0, 230, 122);
+}
+
+/* Secondary button styles */
+.secondaryBtn {
+    background-color: rgb(71, 71, 71);
     color: white;
     border: none;
     border-radius: 1.5px;
@@ -126,31 +116,26 @@ h1 {
     padding: 10px 20px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-  }
-  
+}
 
-  /* .secondaryBtn:hover {
-    background-color: rgb(4, 196, 106);
-  }
-   */
-  .secondaryBtn {
-    background-color: rgb(71, 71, 71);
-  }
-  
-  .active {
+/* Active state for buttons */
+.active {
     background-color: rgb(0, 230, 122);
-  }
-  
-  .todo-list {
+}
+
+/* Styles for todo list */
+.todo-list {
     display: flex;
     flex-direction: column;
-  }
-  
-  .btn-area {
+}
+
+/* Button area styles */
+.btn-area {
     margin-bottom: 15px;
-  }
-  
-  .todo-list-item {
+}
+
+/* Styles for todo list items */
+.todo-list-item {
     background-color: #414040;
     display: flex;
     justify-content: space-between;
@@ -162,66 +147,67 @@ h1 {
     box-shadow: 0px 3px 5px rgb(43, 42, 42);
     border-radius: 5px;
     transition: transform 0.3s ease;
-  }
-  
-  .todo-list-item:hover {
+}
+
+.todo-list-item:hover {
     transform: translateY(-3px);
-  }
-  
-  .todo-list-item h3 {
+}
+
+.todo-list-item h3 {
     font-size: 25px;
     color: rgb(0, 230, 122);
     font-weight: bold;
     margin: 0;
-  }
-  
-  .todo-list-item p {
+}
+
+.todo-list-item p {
     font-size: 14px;
     color: rgb(161, 161, 161);
     margin-top: 8px;
-  }
-  
-  .icon,
-  .check-icon {
+}
+
+/* Icon styles */
+.icon,
+.check-icon {
     font-size: 25px;
     cursor: pointer;
     transition: color 0.3s ease;
-  }
-  
-  .icon:hover
- {
+}
+
+.icon:hover {
     color: red;
-  }
-  
-  .check-icon {
+}
+
+.check-icon {
     margin-left: 10px;
     color: rgb(0, 230, 122);
-  }
+}
 
-  .check-icon:hover {
+.check-icon:hover {
     color: rgb(95, 250, 178);
-  }
+}
 
-  .edit__wrapper {
+/* Styles for edit wrapper */
+.edit__wrapper {
     background-color: #414040;
     padding: 10px;
     display: flex;
     flex-direction: column;
     border-radius: 5px;
-  }
-  
-  .edit__wrapper input,
-  .edit__wrapper textarea {
+}
+
+.edit__wrapper input,
+.edit__wrapper textarea {
     border: 1px solid lightgray;
     padding: 10px;
     margin: 5px;
     border-radius: 3px;
     width: 100%;
-    max-width:740px;
+    max-width: 740px;
     transition: all 0.3s ease;
-  }
-  
-  .edit__wrapper .primaryBtn {
+}
+
+.edit__wrapper .primaryBtn {
     margin-left: auto;
     margin-right: auto;
     padding: 10px;
@@ -229,19 +215,19 @@ h1 {
     width: fit-content;
     border-radius: 5px;
     transition: background-color 0.3s ease;
-  }
-  
-  .edit__wrapper .primaryBtn:hover {
+}
+
+.edit__wrapper .primaryBtn:hover {
     background-color: rgb(4, 196, 106);
-  }
-  
-  @media screen and (max-width: 600px) {
+}
+
+@media screen and (max-width: 600px) {
     .todo-input-item {
-      margin-right: 0;
-      margin-bottom: 15px;
+        margin-right: 0;
+        margin-bottom: 15px;
     }
-  
+
     .todo-input-item input {
-      max-width: 100%;
+        max-width: 100%;
     }
-  }
+}
