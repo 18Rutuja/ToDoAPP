@@ -1,0 +1,247 @@
+
+/* Home.css */
+
+body {
+    background-color: #1f1e1e; /* Set the initial background color */
+    transition: background-color 0.5s ease; /* Add transition for smooth effect */
+  }
+  
+  body:hover {
+    background-color: #5cdb95; /* Change the background color on hover */
+  }
+  
+/* 
+body {
+    background: linear-gradient(-45deg, rgb(0, 230, 122), rgba(27, 27, 27, 0.5), rgb(78, 78, 78));
+    background-size: 400% 400%;
+    animation: gradientAnimation 15s ease infinite alternate;
+  }
+  
+  /* @keyframes gradientAnimation {
+    0% {
+      background-position: 0% 50%;
+    }
+    100% {
+      background-position: 100% 50%;
+    }
+  } */
+   
+
+h1 {
+    text-align: center; 
+    font-size: 36px; 
+    margin-bottom: 20px; 
+    color:white; 
+    text-transform: uppercase; 
+    letter-spacing: 2px; 
+    opacity: 0; 
+    animation: fadeIn 1s ease forwards; 
+  }
+  
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0; 
+    }
+    to {
+      opacity: 2; 
+    }
+  }
+  
+  
+  .todo-wrapper {
+    background: #353434;
+    padding: 2%;
+    width: 90%;
+    margin: 3% auto;
+    max-width: 800px;
+    box-shadow: 0px 5px 7px rgba(27, 27, 27, 0.5);
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  .todo-input {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    border-bottom: 1px solid rgb(78, 78, 78);
+    padding-bottom: 25px;
+    margin-bottom: 25px;
+  }
+  
+  .todo-input-item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-right: 25px;
+    margin-left: 15px;
+  }
+  
+  .todo-input-item label {
+    font-weight: bold;
+    margin-bottom: 10px;
+    color:  rgb(0, 230, 122);;
+  }
+  
+  .todo-input-item input {
+    padding: 8px;
+    border: none;
+    width: 100%;
+    max-width: 250px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    margin-bottom: 10px; /* Added space between input fields */
+  }
+  
+  .todo-input-item input:focus {
+    outline: 1px solid rgb(0, 230, 122);
+    box-shadow:0px 3px 5px rgb(0, 230, 122) ;
+  }
+  
+  .primaryBtn{
+    background-color: rgb(0, 230, 122);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-top: 27px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .primaryBtn:hover{
+    background-color: rgb(4, 196, 106); 
+  }
+   
+  .primaryBtn:focus{
+    box-shadow:0px 3px 5px rgb(0, 230, 122) ;
+  }
+  
+  .secondaryBtn {
+    background-color: rgb(0, 230, 122);
+    color: white;
+    border: none;
+    border-radius: 1.5px;
+    margin-top: 25px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+
+  /* .secondaryBtn:hover {
+    background-color: rgb(4, 196, 106);
+  }
+   */
+  .secondaryBtn {
+    background-color: rgb(71, 71, 71);
+  }
+  
+  .active {
+    background-color: rgb(0, 230, 122);
+  }
+  
+  .todo-list {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .btn-area {
+    margin-bottom: 15px;
+  }
+  
+  .todo-list-item {
+    background-color: #414040;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    margin-bottom: 10px;
+    box-shadow: 0px 3px 5px rgb(43, 42, 42);
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+  }
+  
+  .todo-list-item:hover {
+    transform: translateY(-3px);
+  }
+  
+  .todo-list-item h3 {
+    font-size: 25px;
+    color: rgb(0, 230, 122);
+    font-weight: bold;
+    margin: 0;
+  }
+  
+  .todo-list-item p {
+    font-size: 14px;
+    color: rgb(161, 161, 161);
+    margin-top: 8px;
+  }
+  
+  .icon,
+  .check-icon {
+    font-size: 25px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  
+  .icon:hover
+ {
+    color: red;
+  }
+  
+  .check-icon {
+    margin-left: 10px;
+    color: rgb(0, 230, 122);
+  }
+
+  .check-icon:hover {
+    color: rgb(95, 250, 178);
+  }
+
+  .edit__wrapper {
+    background-color: #414040;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+  }
+  
+  .edit__wrapper input,
+  .edit__wrapper textarea {
+    border: 1px solid lightgray;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 3px;
+    width: 100%;
+    max-width:740px;
+    transition: all 0.3s ease;
+  }
+  
+  .edit__wrapper .primaryBtn {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    font-size: 16px;
+    width: fit-content;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .edit__wrapper .primaryBtn:hover {
+    background-color: rgb(4, 196, 106);
+  }
+  
+  @media screen and (max-width: 600px) {
+    .todo-input-item {
+      margin-right: 0;
+      margin-bottom: 15px;
+    }
+  
+    .todo-input-item input {
+      max-width: 100%;
+    }
+  }
